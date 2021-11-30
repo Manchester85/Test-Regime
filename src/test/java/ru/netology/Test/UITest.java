@@ -24,8 +24,9 @@ public class UITest {
 
     @Test
     void shouldHaveBlockedUser() {
-        $("[data-test-id='login'] .input__control").setValue(getUsername());
-        $("[data-test-id='password'] .input__control").setValue(getPassword());
+        invalidUser();
+        $("[data-test-id='login'] .input__control").setValue(getAnotherUsername());
+        $("[data-test-id='password'] .input__control").setValue(getAnotherPassword());
         $("button[data-test-id=action-login]").click();
         $("[data-test-id=error-notification] .notification__content").shouldBe(visible).shouldHave(text("Пользователь заблокирован"));
     }

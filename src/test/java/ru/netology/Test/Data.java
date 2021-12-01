@@ -63,8 +63,8 @@ public static class UserUser{
     }
         @Value
         private static class User {
-            String username;
+            String login;
             String password;
-            String statusCode;
+            String status;
         }
     }

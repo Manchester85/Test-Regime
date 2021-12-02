@@ -16,7 +16,6 @@ public class UITest {
 
     @Test
     void shouldHaveValidData() {
-
         $("[data-test-id='login'] .input__control").setValue(getUsername());
         $("[data-test-id='password'] .input__control").setValue(getPassword());
         $("button[data-test-id=action-login]").click();

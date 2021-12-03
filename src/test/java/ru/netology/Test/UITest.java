@@ -19,7 +19,7 @@ public class UITest {
         $("[data-test-id='login'] .input__control").setValue(getUsername());
         $("[data-test-id='password'] .input__control").setValue(getPassword());
         $("button[data-test-id=action-login]").click();
-        $(".App_appContainer__3jRx1").shouldBe(visible).shouldHave(text("Интернет Банк"));
+        $(".App_appContainer__3jRx1").shouldBe(visible).shouldHave(text("Личный кабинет"));
     }
 
     @Test
@@ -28,7 +28,7 @@ public class UITest {
         $("[data-test-id='login'] .input__control").setValue(getAnotherUsername());
         $("[data-test-id='password'] .input__control").setValue(getAnotherPassword());
         $("button[data-test-id=action-login]").click();
-        $("[data-test-id=error-notification] .notification__content").shouldBe(visible).shouldHave(text("Пользователь заблокирован"));
+        $("[data-test-id=error-notification] .notification__content").shouldHave(text("Ошибка! Неверно указан логин или пароль"));
     }
 
     @Test
